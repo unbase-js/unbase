@@ -4,13 +4,14 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./base": "./src/eslint/eslint.base.config.js",
-    "./nitro": "./src/eslint/eslint.nitro.config.js",
-    "./nuxt": "./src/eslint/eslint.nuxt.config.js"
+    "./eslint/base": "./src/eslint/eslint.base.config.js",
+    "./eslint/nitro": "./src/eslint/eslint.nitro.config.js",
+    "./eslint/nuxt": "./src/eslint/eslint.nuxt.config.js",
+    "./unbuild/base": "./src/unbuild/unbuild.base.config.ts",
+    "./vitest": "./src/vitest/vitest.base.config.ts"
   },
   "dependencies": {
     "@nuxt/eslint-config": "^1.4.1",
-    "eslint": "^9.28.0",
     "eslint-config-unjs": "^0.4.2",
     "eslint-plugin-turbo": "^2.5.4"
   }

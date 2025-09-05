@@ -10,11 +10,14 @@
   },
   "files": ["dist"],
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
+    "build": "unbuild",
+    "dev": "unbuild --stub",
     "clean": "rm -rf dist",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix"
+  },
+  "devDependencies": {
+    "@unbase/tools-config": "workspace:*"
   },
   "peerDependencies": {
     "typescript": "^5.2.2"

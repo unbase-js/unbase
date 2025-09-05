@@ -1,5 +1,5 @@
-import unjs from "eslint-config-unjs";
-import turboPlugin from "eslint-plugin-turbo";
+import unjs from 'eslint-config-unjs'
+import turboPlugin from 'eslint-plugin-turbo'
 
 /**
  * A shared ESLint configuration for the repository.
@@ -9,23 +9,35 @@ import turboPlugin from "eslint-plugin-turbo";
 export default [
   {
     plugins: {
-      turbo: turboPlugin,
+      turbo: turboPlugin
     },
     rules: {
-      "turbo/no-undeclared-env-vars": "warn",
-    },
+      'turbo/no-undeclared-env-vars': 'warn'
+    }
   },
   ...unjs({
     ignores: [
-      // ignore paths
+      'dist',
+      'node_modules',
+      '.turbo',
+      '.nitro',
+      '.output'
     ],
     rules: {
-      // rule overrides
+      'unicorn/switch-case-braces': 'off',
+      'quotes': ['error', 'single', { avoidEscape: true }],
+      'comma-dangle': ['error', 'never'],
+      'semi': ['error', 'never'],
+      'prefer-ternary': 'off',
+      '@typescript-eslint/prefer-ternary': 'off',
+      '@typescript-eslint/no-unused-vars': 'error',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'turbo/no-undeclared-env-vars': 'warn'
     },
     markdown: {
       rules: {
         // markdown rule overrides
-      },
-    },
+      }
+    }
   })
-];
+]
