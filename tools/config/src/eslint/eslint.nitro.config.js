@@ -1,4 +1,4 @@
-import base from './index.js';
+import base from './eslint.base.config.js';
 
 /**
  * A custom ESLint configuration for libraries that use Nitro.js.

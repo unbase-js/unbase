@@ -8,8 +8,8 @@
     "dev": "nitro dev",
     "preview": "nitro preview",
     "clean": "rm -rf .nitro .output",
-    "lint": "eslint src",
-    "lint:fix": "eslint src --fix"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@unbase/unbase": "workspace:*"

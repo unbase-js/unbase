@@ -36,8 +36,8 @@
   },
   "packageManager": "pnpm@8.6.12",
   "engines": {
-    "node": ">=18.0.0",
-    "pnpm": ">=8.0.0"
+    "node": ">=23.6.0",
+    "pnpm": ">=8.6.0"
   },
   "dependencies": {
     "nitropack": "^2.6.3",
