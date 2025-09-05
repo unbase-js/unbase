@@ -1,0 +1,19 @@
+{
+  "name": "create-unbase-nitro",
+  "version": "0.1.0",
+  "description": "Create Nitro app with unbase-js",
+  "bin": {
+    "create-unbase-nitro": "index.js"
+  },
+  "files": ["index.js", "template"],
+  "scripts": {
+    "test": "node index.js test-app"
+  },
+  "dependencies": {
+    "consola": "^3.2.3",
+    "fs-extra": "^11.1.1"
+  },
+  "keywords": ["create", "nitro", "unbase", "starter"],
+  "author": "Your Name",
+  "license": "MIT"
+}

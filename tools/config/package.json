@@ -1,0 +1,17 @@
+{
+  "name": "@unbase/tools-config",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./base": "./src/eslint/eslint.base.config.js",
+    "./nitro": "./src/eslint/eslint.nitro.config.js",
+    "./nuxt": "./src/eslint/eslint.nuxt.config.js"
+  },
+  "dependencies": {
+    "@nuxt/eslint-config": "^1.4.1",
+    "eslint": "^9.28.0",
+    "eslint-config-unjs": "^0.4.2",
+    "eslint-plugin-turbo": "^2.5.4"
+  }
+}

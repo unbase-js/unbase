@@ -1,0 +1,16 @@
+{
+  "name": "@unbase/docs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Documentation for unbase-js",
+  "scripts": {
+    "build": "vitepress build",
+    "dev": "vitepress dev",
+    "preview": "vitepress preview",
+    "clean": "rm -rf .vitepress/dist"
+  },
+  "devDependencies": {
+    "vitepress": "2.0.0-alpha.12"
+  }
+}

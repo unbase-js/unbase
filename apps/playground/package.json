@@ -1,0 +1,26 @@
+{
+  "name": "@unbase/playground",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Playground for testing unbase-js",
+  "scripts": {
+    "build": "nitro build",
+    "dev": "nitro dev",
+    "preview": "nitro preview",
+    "clean": "rm -rf .nitro .output",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix"
+  },
+  "dependencies": {
+    "@unbase/unbase": "workspace:*"
+  },
+  "devDependencies": {
+    "@unbase/tools-config": "workspace:*"
+  },
+  "peerDependencies": {
+    "nitropack": "^2.6.3"
+  },
+  "keywords": ["playground", "test", "unbase"],
+  "author": "Your Name",
+  "license": "MIT"
+}

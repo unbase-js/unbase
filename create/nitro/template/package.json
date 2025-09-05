@@ -1,0 +1,14 @@
+{
+  "name": "my-unbase-nitro-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "nitro build",
+    "dev": "nitro dev",
+    "preview": "nitro preview"
+  },
+  "dependencies": {
+    "@unbase-js/unbase": "^0.1.0",
+    "nitropack": "^2.6.3"
+  }
+}

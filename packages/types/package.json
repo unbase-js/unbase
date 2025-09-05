@@ -1,0 +1,25 @@
+{
+  "name": "@unbase/types",
+  "version": "0.1.0",
+  "description": "TypeScript types for unbase",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix"
+  },
+  "peerDependencies": {
+    "typescript": "^5.2.2"
+  },
+  "keywords": ["types", "typescript", "unbase"],
+  "author": "Your Name",
+  "license": "MIT"
+}

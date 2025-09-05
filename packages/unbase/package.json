@@ -1,0 +1,48 @@
+{
+  "name": "@unbase/unbase",
+  "version": "0.1.0",
+  "description": "The Edge-First TypeScript BaaS",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "test": "vitest",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@unbase/types": "workspace:*",
+    "c12": "^3.2.0",
+    "h3": "^1.8.1"
+  },
+  "devDependencies": {
+    "@unbase/tools-config": "workspace:*",
+    "vitest": "^0.34.6"
+  },
+  "peerDependencies": {
+    "nitropack": "^2.6.3"
+  },
+  "keywords": [
+    "baas",
+    "backend",
+    "typescript",
+    "nitro",
+    "nuxt",
+    "edge"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
