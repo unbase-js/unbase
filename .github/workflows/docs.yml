@@ -4,20 +4,34 @@ name: Deploy Documentation
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
+
+# Ajouter les permissions
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Limiter la concurrence
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   docs:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      
       - uses: pnpm/action-setup@v2
         with:
           version: 8
+          
       - uses: actions/setup-node@v4
         with:
-          node-version: 23
+          node-version: 18
           cache: 'pnpm'
       
       - name: Install dependencies
@@ -26,9 +40,14 @@ jobs:
       - name: Build docs
         run: pnpm docs:build
       
-      - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/main'
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: apps/docs/.vitepress/dist
+          path: apps/docs/.vitepress/dist
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
